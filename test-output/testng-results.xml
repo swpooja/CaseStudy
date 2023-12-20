@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-20T05:53:26 GMT" name="Default suite" finished-at="2023-12-20T05:53:39 GMT" duration-ms="12841">
+  <suite started-at="2023-12-20T07:52:58 GMT" name="Default suite" finished-at="2023-12-20T07:53:12 GMT" duration-ms="13205">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MyTestRunner@b62d79]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-12-20T05:53:26 GMT" name="Default test" finished-at="2023-12-20T05:53:39 GMT" duration-ms="12841">
+    <test started-at="2023-12-20T07:52:58 GMT" name="Default test" finished-at="2023-12-20T07:53:12 GMT" duration-ms="13205">
       <class name="runners.MyTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.MyTestRunner@b62d79]" started-at="2023-12-20T05:53:26 GMT" name="setUpClass" finished-at="2023-12-20T05:53:27 GMT" duration-ms="830" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.MyTestRunner@b62d79]" started-at="2023-12-20T07:52:58 GMT" name="setUpClass" finished-at="2023-12-20T07:52:59 GMT" duration-ms="816" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@216e0771]]>
+                <![CDATA[org.testng.TestRunner@25d93198]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MyTestRunner@b62d79]" started-at="2023-12-20T05:53:27 GMT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-12-20T05:53:39 GMT" duration-ms="11881" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MyTestRunner@b62d79]" started-at="2023-12-20T07:52:59 GMT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-12-20T07:53:12 GMT" duration-ms="12272" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,10 +34,22 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.switchTo()" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.switchTo()" because "this.driver" is null
+at pages.ProductListPage.addToCart(ProductListPage.java:57)
+at stepDefs.OrderStepDefs.user_add_item_to_cart(OrderStepDefs.java:44)
+at ✽.User add item to cart(file:///C:/Users/Administrator/eclipse-workspace/CaseStudy/src/test/resources/features/placeOrder.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.MyTestRunner@b62d79]" started-at="2023-12-20T05:53:39 GMT" name="tearDownClass" finished-at="2023-12-20T05:53:39 GMT" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.MyTestRunner@b62d79]" started-at="2023-12-20T07:53:12 GMT" name="tearDownClass" finished-at="2023-12-20T07:53:12 GMT" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

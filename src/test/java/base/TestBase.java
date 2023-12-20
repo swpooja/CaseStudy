@@ -3,6 +3,7 @@ package base;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,6 +12,7 @@ public class TestBase {
 	private static TestBase testBase;
 	private static WebDriver driver;
 	private static Properties prop;
+	
 	private TestBase() {
 		String strBrowser = "chrome";
 		
@@ -44,6 +46,7 @@ public class TestBase {
 		}
 		testBase = null;
 	}
+	
 	
 
 }
